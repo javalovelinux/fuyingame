@@ -1,12 +1,14 @@
 package com.css.repository.entity;
 
 import lombok.ToString;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.util.Objects;
 @ToString
 @Entity
 @Table(name = "article_categories", schema = "hmrzj", catalog = "")
+@Where(clause = "is_display=1")
 public class ArticleCategoriesEntity {
     private int id;
     private String name;
